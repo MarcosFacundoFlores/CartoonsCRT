@@ -49,6 +49,17 @@ app.get("/play", function (req, res) {
   res.send(`Playing ${folder}`);
 });
 
+app.get("/play-random", function (req, res) {
+  const subfolders = fs.readdirSync("videos");
+  const randomSubfolder = subfolders[Math.floor(Math.random() * subfolders.length)];
+  if (player) {
+    player.kill();
+  }
+  folder = randomSubfolder;
+  startPlaying();
+  res.send(`Playing random video from ${randomSubfolder}`);
+});
+
 app.listen(3000, function () {
   console.log("Server listening on port 3000");
 });

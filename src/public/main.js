@@ -4,4 +4,8 @@ $(document).ready(function () {
     console.log(folder);
     $.get("/play", { folder: folder });
   });
+
+  $('#randomButton').click(function (){
+    $.get("/play-random");
+  })
 });

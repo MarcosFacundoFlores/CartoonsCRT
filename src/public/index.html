@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Video App</title>
+    <title>Cartoon Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1>My Video App</h1>
-    <button class="subfolder" data-folder="DARIA">DARIA</button>
-    <button class="subfolder" data-folder="EDEDDEDDY">ED, EDD Y EDDY</button>
-    <button class="subfolder" data-folder="DEXTER">DEXTER</button>
-    <button id="playButton">Play</button>
+    <div class="container-fluid mt-5">
+      <h1 class="text-center mb-5">Hevi's Cartoon Player</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <button class="subfolder btn btn-block btn-lg btn-primary mb-3" data-folder="DARIA">DARIA</button>
+        </div>
+        <div class="col-md-4">
+          <button class="subfolder btn btn-block btn-lg btn-primary mb-3" data-folder="EDEDDEDDY">ED, EDD Y EDDY</button>
+        </div>
+        <div class="col-md-4">
+          <button class="subfolder btn btn-block btn-lg btn-primary mb-3" data-folder="DEXTER">DEXTER</button>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <button id="randomButton" class="btn btn-block btn-lg btn-danger">Play a Random Video</button>
+        </div>
+      </div>
+    </div>
   </body>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="main.js"></script>
-  <!-- <script>
-    $(document).ready(function() {
-      $('#playButton').click(function() {
-        $.get('/play');
-      });
-    });
-  </script> -->
 </html>
